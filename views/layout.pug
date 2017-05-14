@@ -59,8 +59,8 @@ html
           li
             a(href='/' + i18n.getLocale() + '/contacts') #{i18n.__('Contacts')}
       block content
-
-    link(rel='stylesheet', type='text/css', href='/stylesheets/font-' + i18n.getLocale() + '.css')
+    if i18n.getLocale() == 'hy'
+      link(rel='stylesheet', type='text/css', href='/stylesheets/font-' + i18n.getLocale() + '.css')
     link(rel='stylesheet', type='text/css', href='/stylesheets/styles.css')
     link(rel='stylesheet', type='text/css', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
 
