@@ -1,9 +1,9 @@
 /* global $,  */
 
  $(function () {
+   $('.menu').fadeIn(0)
    matchAndMarkSelectedPage()
    $('.hamburger').click(function () {
-     console.log('hamburger')
      $('nav').toggleClass('show-menu')
    })
  })
