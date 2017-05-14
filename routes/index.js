@@ -7,6 +7,7 @@ const path = require('path')
 
 const css = fs.readFileSync(path.join(__dirname, '../public/stylesheets/styles.css'), 'utf8').replace(/\s+/g, ' ')
 const js = fs.readFileSync(path.join(__dirname, '../public/javascripts/main.js'), 'utf8').replace(/\s+/g, ' ')
+const bootstrap = fs.readFileSync(path.join(__dirname, '../public/stylesheets/bootstrap.min.css'), 'utf8').replace(/\s+/g, ' ')
 
 router.get('/:album/:imageName?', (req, res, next) => {
   const album = req.params.album
@@ -20,6 +21,7 @@ router.get('/:album/:imageName?', (req, res, next) => {
     js,
     css,
     albums,
+    bootstrap,
     i18n: res,
     albumImages,
     url: req.url,
@@ -29,19 +31,19 @@ router.get('/:album/:imageName?', (req, res, next) => {
 })
 
 router.get('/biography', (req, res, next) => {
-  res.render('biography-' + req.getLocale(), { albums, i18n: res, url: req.url, css, js })
+  res.render('biography-' + req.getLocale(), { albums, i18n: res, url: req.url, css, js, bootstrap })
 })
 
 router.get('/exhibitions', (req, res, next) => {
-  res.render('exhibitions', { albums, i18n: res, url: req.url, css, js })
+  res.render('exhibitions', { albums, i18n: res, url: req.url, css, js, bootstrap })
 })
 
 router.get('/contacts', (req, res, next) => {
-  res.render('contacts', { albums, i18n: res, url: req.url, css, js })
+  res.render('contacts', { albums, i18n: res, url: req.url, css, js, bootstrap })
 })
 
 router.get('/', (req, res, next) => {
-  res.render('index', { albums, i18n: res, url: req.url, css, js })
+  res.render('index', { albums, i18n: res, url: req.url, css, js, bootstrap })
 })
 
 module.exports = router

@@ -20,6 +20,8 @@ html
     meta(property='og:description', content=i18n.__("Karen Ohanyan's biography, selected works, exhibitions and some articles."))
     style.
       !{css}
+    style.
+      !{bootstrap}
     script(src="https://cdn.jsdelivr.net/ga-lite/latest/ga-lite.min.js" async)
     script.
       var galite = galite || {}
@@ -60,6 +62,5 @@ html
 
 if i18n.getLocale() == 'hy'
   link(rel='stylesheet', type='text/css', href='/stylesheets/font-' + i18n.getLocale() + '.css')
-link(rel='stylesheet', type='text/css', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
 
 script(src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js', type='text/javascript', async="async")
