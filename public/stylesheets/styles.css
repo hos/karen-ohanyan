@@ -64,6 +64,10 @@ body {
     margin-left: 5px;
 }
 
+.language-bar a{
+    margin: 2px;
+}
+
 .no-underline:hover,
 .no-underline {
     text-decoration: none;

@@ -36,7 +36,7 @@
      href = href.match(/20\d{2}/) || href
      return window.location.href.indexOf(href) !== -1
    })
-   return $(currentItem || $('nav a')[0]).addClass('selected')
+   return $(currentItem || links.reverse().shift()).addClass('selected')
  }
 
  function getCurrentImage () {
