@@ -19,7 +19,7 @@ i18n.configure({
   cookie: 'i18n'
 })
 
-// view engine setup
+app.disable('x-powered-by')
 app.set('views', [path.join(__dirname, 'views'), path.join(__dirname, 'views/biography'), path.join(__dirname, 'views/articles')])
 app.set('view engine', 'pug')
 
