@@ -1,7 +1,7 @@
 /* global $,  */
 
  $(function () {
-   $('.menu').fadeIn(0)
+   $('.menu').css('visibility', 'visible')
    matchAndMarkSelectedPage()
    $('.hamburger').click(function () {
      $('nav').toggleClass('show-menu')

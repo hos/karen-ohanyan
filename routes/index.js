@@ -6,7 +6,7 @@ const fs = require('fs')
 const path = require('path')
 
 const css = fs.readFileSync(path.join(__dirname, '../public/stylesheets/styles.css'), 'utf8').replace(/\s+/g, ' ')
-const js = fs.readFileSync(path.join(__dirname, '../public/javascripts/main.js'), 'utf8').replace(/\s+/g, ' ')
+const js = fs.readFileSync(path.join(__dirname, '../public/javascripts/main.js'), 'utf8')//.replace(/\s+/g, ' ')
 const bootstrap = fs.readFileSync(path.join(__dirname, '../public/stylesheets/bootstrap.min.css'), 'utf8').replace(/\s+/g, ' ')
 
 router.get('/:album/:imageName?', (req, res, next) => {
