@@ -6,7 +6,8 @@ block content
   .center-view
     .image-container
       span.cursor-pointer(onclick='previousImage()') &#9665
-        img(src='/images/large/' + selectedImage.fileName, alt=selectedImage['name_' + i18n.getLocale()])
+        a(href='/images/large/' + selectedImage.fileName, target="top")
+          img(src='/images/large/' + selectedImage.fileName, alt=selectedImage['name_' + i18n.getLocale()])
       span.cursor-pointer(onclick='nextImage()') &#9655
       br
       span.title #{selectedImage['name_' + i18n.getLocale()]} - 
