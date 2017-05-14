@@ -9,18 +9,13 @@ router.get('/:album/:imageName?', function (req, res, next) {
   const startYear = parseInt(album.split('-')[0], 10)
   if (!startYear) return next()
   const endYear = parseInt(album.split('-')[1], 10)
-
   const albumImages = endYear ? imageManager.getByYears([startYear, endYear]) : imageManager.getByYear([startYear])
   const selectedImage = albumImages.find(img => img.fileName === (imageName + '.jpg')) || albumImages[0]
-
-  console.log(req.url)
-  console.log('\n\n\n\n****** selectedImage ******')
-  console.log(selectedImage)
-
   res.render('album', {
     albums,
     i18n: res,
     albumImages,
+    url: req.url,
     selectedImage,
     currentUrl: req.url.replace('/' + imageName, '')
   })
@@ -29,7 +24,8 @@ router.get('/:album/:imageName?', function (req, res, next) {
 router.get('/', function (req, res, next) {
   res.render('index', {
     albums,
-    i18n: res
+    i18n: res,
+    url: req.url
   })
 })
 

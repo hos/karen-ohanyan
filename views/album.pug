@@ -5,16 +5,15 @@ block content
     window.albumImages = !{JSON.stringify(albumImages)}
   .center-view
     .image-container
-      span.cursor-pointer(onclick='previews()') &#9665
-        img(src='/images/o/' + selectedImage.fileName, alt=selectedImage['name_' + i18n.getLocale()])
-      span.cursor-pointer(onclick='next()') &#9655
+      span.cursor-pointer(onclick='previousImage()') &#9665
+        img(src='/images/large/' + selectedImage.fileName, alt=selectedImage['name_' + i18n.getLocale()])
+      span.cursor-pointer(onclick='nextImage()') &#9655
       br
       span.title #{selectedImage['name_' + i18n.getLocale()]} - 
       span.title.gray #{selectedImage.size}, #{selectedImage.year}
   if albumImages
-    -var base = '/'
-    .image-list(data-ng-if='getPath()', data-ng-controller='ListController')
+    .image-list
       each image in albumImages
         span
           a(href=currentUrl + '/' + image.fileName.replace('.jpg', ''))
-            img(src='/images/o/' + image.fileName, alt=image['name_' + i18n.getLocale()])
+            img(src='/images/thumb/' + image.fileName, alt=image['name_' + i18n.getLocale()])
