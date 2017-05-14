@@ -13,7 +13,8 @@ block content
       span.title(itemprop="name") #{selectedImage['name_' + i18n.getLocale()]}
       span  - 
       span(itemprop="description").title.gray #{selectedImage.size}, #{selectedImage.year}
-      span(style="visibility:hidden;" itemprop="creator" itemscope itemtype="http://schema.org/Person") #{i18n.__('Karen Ohanyan')}
+      span(style="visibility:hidden;" itemprop="creator" itemscope itemtype="http://schema.org/Person") 
+        span(itemprop="name") #{i18n.__('Karen Ohanyan')}
   .image-list
     each image in albumImages
       span
