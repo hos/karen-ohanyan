@@ -6,7 +6,7 @@ const fs = require('fs')
 const path = require('path')
 
 const css = fs.readFileSync(path.join(__dirname, '../public/stylesheets/styles.css'), 'utf8').replace(/\s+/g, ' ')
-const js = fs.readFileSync(path.join(__dirname, '../public/javascripts/main.js'), 'utf8')//.replace(/\s+/g, ' ')
+const js = fs.readFileSync(path.join(__dirname, '../public/javascripts/main.js'), 'utf8')
 const bootstrap = fs.readFileSync(path.join(__dirname, '../public/stylesheets/bootstrap.min.css'), 'utf8').replace(/\s+/g, ' ')
 
 router.get('/:album/:imageName?', (req, res, next) => {
@@ -18,15 +18,15 @@ router.get('/:album/:imageName?', (req, res, next) => {
   const albumImages = endYear ? imageManager.getByYears([startYear, endYear]) : imageManager.getByYear([startYear])
   const selectedImage = albumImages.find(img => img.fileName === (imageName + '.jpg')) || albumImages[0]
   res.render('album', {
-    js,
-    css,
-    albums,
-    bootstrap,
-    i18n: res,
-    albumImages,
-    url: req.url,
+    currentUrl: req.url.replace('/' + imageName, ''),
     selectedImage,
-    currentUrl: req.url.replace('/' + imageName, '')
+    url: req.url,
+    albumImages,
+    i18n: res,
+    bootstrap,
+    albums,
+    css,
+    js
   })
 })
 
