@@ -288,7 +288,7 @@ body {
     }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1124px) {
     .menu {
         margin-left: 0;
     }
