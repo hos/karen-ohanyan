@@ -1,0 +1,59 @@
+doctype html
+html
+  head
+    meta(name='google-site-verification', content='N2Noa0lA-SgD9RJVD_9LC_8KaAYKus2xrUumu2yTQpI')
+    meta(charset='UTF-8')
+    title=i18n.__('Karen Ohanyan')
+    script(src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js', type='text/javascript', charset='utf-8')
+    script(src='/javascripts/main.js', type='text/javascript')
+    meta(itemprop='name', content=i18n.__('Karen Ohanyan'))
+    meta(itemprop='description', content=i18n.__('Biographic site of Karen Ohanyan, selected works, exhibitions and some articles about him.'))
+    meta(property='og:title', content=i18n.__('Karen Ohanyan'))
+    meta(property='og:url', content='http://www.karenohanyan.com/')
+    meta(property='og:image', content='http://www.karenohanyan.com/images/o/The-Origin-of-the-World.jpg')
+    meta(property='og:description', content=i18n.__("Karen Ohanyan's biography, selected works, exhibitions and some articles."))
+    link(rel='stylesheet', type='text/css', href='/stylesheets/styles.css')
+    link(rel='stylesheet', type='text/css', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(name='yandex-verification', content='bc49ca3481a376b4')
+    meta(name='msvalidate.01', content='3D1163D51A19A22585EB995BD429F589')
+    script.
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-85417314-1', 'auto');
+      ga('send', 'pageview');
+  body
+    a.hamburger(data-ng-click='show.menu = !show.menu')
+      hr
+      hr
+      hr
+    .main-container
+      .data-ng-view.view-animation
+      nav.menu(style='display:none;', data-ng-class="{'show-menu' : show.menu}")
+        span.language-bar
+          .space
+          a.no-underline.red(href='/hy', hreflang='hy') հայ
+          a.no-underline.red(href='/en', hreflang='en') eng
+          a.no-underline.red(href='/ru', hreflang='ru') рус
+        header.header #{i18n.__('Karen Ohanyan')}
+        br
+        ul.parent-menu
+          li
+            a(href='/' + i18n.getLocale()) #{i18n.__('Home')}
+          li
+            a.cursor-pointer #{i18n.__('Works')}
+            ul.submenu
+              each album in albums
+                li()
+                  a(href='/' + i18n.getLocale() + '/' + album.href) #{album['name_' + i18n.getLocale()]}
+          li
+            a(href='/articles') #{i18n.__('Articles')}
+          li
+            a(href='/bio') #{i18n.__('Biography')}
+          li
+            a(href='/exhibitions') #{i18n.__('Exhibitions')}
+          li
+            a(href='/contacts') #{i18n.__('Contacts')}
+      block content

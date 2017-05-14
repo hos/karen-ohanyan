@@ -1,0 +1,324 @@
+* {
+    font-family: 'Verdana';
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    color: #000;
+}
+
+body {
+    overflow-y: scroll;
+}
+
+.arrow {
+    color: #555;
+}
+
+.noselect {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.header {
+    white-space: nowrap;
+    margin-top: 14px;
+    position: relative;
+    top: 0;
+    font-size: 20px;
+}
+
+.articles {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.space {
+    padding: 5px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.ko {
+    font-weight: bold;
+}
+
+.image-container a span:first-child {
+    height: 100%;
+}
+
+.image-container a span:last-child {
+    height: 100%;
+}
+
+.language-bar {
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+.language-bar>span {
+    margin-left: 5px;
+}
+
+.no-underline:hover,
+.no-underline {
+    text-decoration: none;
+}
+
+.hamburger {
+    background-color: #fff;
+    width: 30px;
+    height: 30px;
+    float: left;
+    margin: 15px;
+    display: none;
+}
+
+.hamburger>hr {
+    margin-top: 2px;
+    margin-bottom: 2px;
+    width: 100%;
+    border-top: 2px solid #000;
+}
+
+.red {
+    color: rgb(203, 73, 73);
+}
+
+.cursor-default {
+    cursor: default;
+}
+
+.cursor-pointer,
+.language-bar>span {
+    cursor: pointer;
+}
+
+.hide-part {
+    max-height: 300px;
+}
+
+.article {
+    max-height: 300px;
+    min-width: 300px;
+    max-width: 800px;
+    margin: 20px;
+    text-align: justify;
+}
+
+.smaller {
+    font-size: 12px;
+}
+
+.title {
+    font-size: 11px;
+}
+
+.justify {
+    text-align: justify;
+}
+
+.bold {
+    font-weight: #444;
+}
+
+.gray {
+    color: #444;
+}
+
+.exhibitions {
+    text-align: center;
+    font-size: 12.5px;
+    line-height: 19px;
+}
+
+.exhibitions header:after {
+    content: "";
+    display: block;
+    padding: 20px;
+}
+
+.exhibitions>div {
+    margin: 0 auto;
+    display: inline-block;
+    text-align: left;
+    line-height: 20px;
+}
+
+.exhibitions-text:before {
+    content: " ";
+    display: block;
+    padding: 20px;
+}
+
+.exhibitions img {
+    width: 80%;
+}
+
+.about-text {
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contacts>div {
+    color: #000;
+    text-align: left;
+}
+
+.image-list {
+    max-width: 28%;
+    max-height: 300px;
+    min-height: 150px;
+    text-align: center;
+    overflow-x: auto;
+}
+
+.image-list span {
+    width: 60px;
+    height: 60px;
+    float: left;
+    margin: 2px;
+    overflow: hidden;
+}
+
+.image-list span img {
+    width: 100%;
+}
+
+.in-border {
+    box-shadow: 0 0 1px #000;
+}
+
+.image-container {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.image-container img {
+    max-width: 80%;
+    max-height: 500px;
+    margin: auto;
+}
+
+.image-container>div {
+    white-space: nowrap;
+}
+
+.center-view {
+    margin-top: 50px;
+    width: 75%;
+    min-height: 300px;
+    float: left;
+    text-align: center;
+}
+
+.icon {
+    width: 60px;
+    height: 60px;
+    margin: 2px;
+    box-shadow: 0 0 .5px #000;
+}
+
+.menu {
+    text-align: left;
+    display: inline-block;
+    margin-left: 16px;
+    overflow: auto;
+}
+
+.parent-menu {
+    min-width: 200px;
+    float: left;
+}
+
+.submenu li {
+    padding-left: 10px;
+}
+
+.menu ul {
+    list-style-type: none;
+}
+
+.menu ul li a {
+    font-size: 12px;
+    padding: 1px;
+    color: #000000;
+    text-decoration: none;
+}
+
+.menu ul li a:hover {
+    background-color: rgb(201, 75, 73);
+    color: #fff;
+}
+
+.show-menu {
+    background-color: #fff !important;
+    left: 0 !important;
+    opacity: 1 !important;
+}
+
+.show-menu:after {
+    content: " " !important;
+    box-shadow: 0 0 5px #000 !important;
+}
+
+.menu ul li a.selected {
+    background-color: #222;
+    color: #fff;
+    box-shadow: none;
+}
+
+@media screen and (min-width: 2000px) {
+    .image-container {
+        max-width: 100%;
+        margin: auto;
+    }
+    .image-container img {
+        max-height: 1200px;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .menu {
+        margin-left: 0;
+    }
+    .hamburger {
+        display: inline-block;
+    }
+    .menu {
+        background-color: transparent;
+        transition: all .2s;
+        position: fixed;
+        padding: 30px;
+        padding-top: 0;
+        left: -100px;
+        bottom: 0;
+        top: 30px;
+        opacity: 0;
+    }
+    .image-container {
+        width: 95%;
+    }
+    .data-ng-view {
+        width: 100%;
+    }
+    .image-list {
+        max-width: 80%;
+        margin: 0 auto;
+        width: 100% !important;
+        max-height: 300px;
+        min-height: 150px;
+        text-align: center;
+        overflow-x: auto;
+    }
+    header,
+    .language-bar {
+        margin: 20px;
+    }
+}
