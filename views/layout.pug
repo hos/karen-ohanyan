@@ -1,21 +1,24 @@
 doctype html
 html
   head
-    meta(name='google-site-verification', content='N2Noa0lA-SgD9RJVD_9LC_8KaAYKus2xrUumu2yTQpI')
-    meta(charset='UTF-8')
     title=i18n.__('Karen Ohanyan')
-    script(src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js', type='text/javascript', charset='utf-8')
-    script(src='/javascripts/main.js', type='text/javascript')
+
+    meta(name='google-site-verification', content='N2Noa0lA-SgD9RJVD_9LC_8KaAYKus2xrUumu2yTQpI')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(charset='UTF-8')
+
+
+    meta(name="title" content=i18n.__('Karen Ohanyan'))
+    meta(name="description" content=i18n.__('Biographic site of Karen Ohanyan, selected works, exhibitions and some articles about him.'))
+
     meta(itemprop='name', content=i18n.__('Karen Ohanyan'))
     meta(itemprop='description', content=i18n.__('Biographic site of Karen Ohanyan, selected works, exhibitions and some articles about him.'))
+
     meta(property='og:title', content=i18n.__('Karen Ohanyan'))
     meta(property='og:url', content='http://www.karenohanyan.com/')
     meta(property='og:image', content='http://www.karenohanyan.com/images/large/The-Origin-of-the-World.jpg')
     meta(property='og:description', content=i18n.__("Karen Ohanyan's biography, selected works, exhibitions and some articles."))
-    link(rel='stylesheet', type='text/css', href='/stylesheets/font-' + i18n.getLocale() + '.css')
-    link(rel='stylesheet', type='text/css', href='/stylesheets/styles.css')
-    link(rel='stylesheet', type='text/css', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
-    meta(name='viewport', content='width=device-width, initial-scale=1')
+
     script.
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -56,3 +59,10 @@ html
           li
             a(href='/' + i18n.getLocale() + '/contacts') #{i18n.__('Contacts')}
       block content
+
+    link(rel='stylesheet', type='text/css', href='/stylesheets/font-' + i18n.getLocale() + '.css')
+    link(rel='stylesheet', type='text/css', href='/stylesheets/styles.css')
+    link(rel='stylesheet', type='text/css', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+
+    script(src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js', type='text/javascript', charset='utf-8')
+    script(src='/javascripts/main.js', type='text/javascript')
