@@ -30,14 +30,13 @@
  }
 
  function matchAndMarkSelectedPage () {
-   var links = $('nav a[href]')
-   for (var i = (links.length - 1); i >= 0; i--) {
-     var a = links[i]
+   var links = $('.parent-menu a[href]').toArray().reverse()
+   var currentItem = links.find(function (a) {
      var href = $(a).attr('href').replace(window.location.hostname)
      href = href.match(/20\d{2}/) || href
-     if (window.location.href.indexOf(href) !== -1) return $(a).addClass('selected')
-   }
-   return $($('nav a')[0]).addClass('selected')
+     return window.location.href.indexOf(href) !== -1
+   })
+   return $(currentItem || $('nav a')[0]).addClass('selected')
  }
 
  function getCurrentImage () {
