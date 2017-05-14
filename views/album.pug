@@ -15,5 +15,5 @@ block content
     .image-list
       each image in albumImages
         span
-          a(href=currentUrl + '/' + image.fileName.replace('.jpg', ''))
+          a(href= '/' + i18n.getLocale() + currentUrl + '/' + image.fileName.replace('.jpg', ''))
             img(src='/images/thumb/' + image.fileName, alt=image['name_' + i18n.getLocale()])
