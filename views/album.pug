@@ -4,14 +4,16 @@ block content
   script.
     window.albumImages = !{JSON.stringify(albumImages)}
   .center-view
-    .image-container
+    .image-container(itemscope itemtype="http://schema.org/VisualArtwork")
       span.cursor-pointer(onclick='previousImage()') &#9665
         a(href='/images/large/' + selectedImage.fileName, target="top")
-          img(src='/images/large/' + selectedImage.fileName, alt=selectedImage['name_' + i18n.getLocale()])
+          img(src='/images/large/' + selectedImage.fileName, alt=selectedImage['name_' + i18n.getLocale()], itemprop="image")
       span.cursor-pointer(onclick='nextImage()') &#9655
       br
-      span.title #{selectedImage['name_' + i18n.getLocale()]} - 
-      span.title.gray #{selectedImage.size}, #{selectedImage.year}
+      span.title(itemprop="name") #{selectedImage['name_' + i18n.getLocale()]}
+      span  - 
+      span(itemprop="description").title.gray #{selectedImage.size}, #{selectedImage.year}
+      span(style="visibility:hidden;" itemprop="creator" itemscope itemtype="http://schema.org/Person") #{i18n.__('Karen Ohanyan')}
   .image-list
     each image in albumImages
       span
