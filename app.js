@@ -7,7 +7,7 @@ const bodyParser = require('body-parser')
 const i18n = require('i18n')
 
 const index = require('./routes/index')
-const users = require('./routes/users')
+const articles = require('./routes/articles')
 
 const app = express()
 
@@ -19,7 +19,7 @@ i18n.configure({
 })
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'))
+app.set('views', [path.join(__dirname, 'views'), path.join(__dirname, 'views/biography'), path.join(__dirname, 'views/articles')])
 app.set('view engine', 'pug')
 
 app.use(i18n.init)
@@ -42,7 +42,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
 
 app.use('/', index)
-app.use('/users', users)
+app.use('/articles', articles)
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
