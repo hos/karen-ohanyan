@@ -8,7 +8,7 @@ const uglify = require('uglify-es')
 
 const css = fs.readFileSync(path.join(__dirname, '../public/stylesheets/styles.css'), 'utf8').replace(/\s+/g, ' ')
 const js = uglify.minify(fs.readFileSync(path.join(__dirname, '../public/javascripts/main.js'), 'utf8')).code
-const bootstrap = fs.readFileSync(path.join(__dirname, '../public/stylesheets/bootstrap.min.css'), 'utf8').replace(/\s+/g, ' ')
+const bootstrap = ''//fs.readFileSync(path.join(__dirname, '../public/stylesheets/bootstrap.min.css'), 'utf8').replace(/\s+/g, ' ')
 
 router.get('/:albumName/:imageName?', (req, res, next) => {
   const albumName = req.params.albumName

@@ -1,13 +1,18 @@
 * {
     font-family: 'OK Custom Font', 'Verdana';
-    padding: 0;
-    margin: 0;
     text-decoration: none;
     color: #000;
 }
 
 body {
+    padding: 0;
+    margin: 0;
     overflow-y: scroll;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
 }
 
 .arrow {
@@ -35,6 +40,46 @@ body {
     margin: 0 auto;
 }
 
+.articles h4 {
+    box-sizing: border-box;
+    color: rgb(203, 73, 73);
+    cursor: auto;
+    display: block;
+    font-family: "OK Custom Font", Verdana;
+    font-size: 18px;
+    font-weight: 500;
+    height: 19px;
+    line-height: 19.8px;
+    margin-bottom: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 10px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+    text-align: justify;
+}
+
+.articles p {
+    color: rgb(0, 0, 0);
+    cursor: auto;
+    display: block;
+    font-family: "OK Custom Font", Verdana;
+    font-size: 14px;
+    height: 20px;
+    line-height: 20px;
+    margin-bottom: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+    text-align: justify;
+}
+
 .space {
     padding: 5px;
 }
@@ -45,6 +90,12 @@ body {
 
 .ko {
     font-weight: bold;
+}
+
+.center-view > .article {
+    text-align: center;
+    margin: 0 auto;
+    width: 70%;
 }
 
 .image-container a span:first-child {
@@ -64,12 +115,11 @@ body {
     margin-left: 5px;
 }
 
-.language-bar a{
+.language-bar a {
     margin: 2px;
 }
 
-.no-underline:hover,
-.no-underline {
+.no-underline:hover, .no-underline {
     text-decoration: none;
 }
 
@@ -97,16 +147,19 @@ body {
     cursor: default;
 }
 
-.cursor-pointer,
-.language-bar>span {
+.cursor-pointer, .language-bar>span {
     cursor: pointer;
+}
+
+.cursor-pointer {
+    display: none;
 }
 
 .hide-part {
     max-height: 300px;
 }
 
-.article {
+.articles .article {
     max-height: 300px;
     min-width: 300px;
     max-width: 800px;
@@ -175,6 +228,7 @@ body {
 }
 
 .image-list {
+    margin-top: 10px;
     max-width: 28%;
     max-height: 300px;
     min-height: 150px;
@@ -232,7 +286,7 @@ body {
     text-align: left;
     display: inline-block;
     margin-left: 16px;
-    overflow: auto;
+    overflow: visible;
 }
 
 .parent-menu {
@@ -321,8 +375,7 @@ body {
         text-align: center;
         overflow-x: auto;
     }
-    header,
-    .language-bar {
+    header, .language-bar {
         margin: 20px;
     }
 }
