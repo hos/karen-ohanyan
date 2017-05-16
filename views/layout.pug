@@ -8,7 +8,6 @@ html
     meta(name='viewport', content='width=device-width, initial-scale=1')
     meta(charset='UTF-8')
 
-
     meta(name="title" content=i18n.__('Karen Ohanyan'))
     meta(name="description" content=i18n.__('Biographic site of Karen Ohanyan, selected works, exhibitions and some articles about him.'))
 
@@ -21,6 +20,15 @@ html
     meta(property='og:description', content=i18n.__("Karen Ohanyan's biography, selected works, exhibitions and some articles."))
     style !{css}
     style !{bootstrap}
+    script(type="application/ld+json").
+       [{ "@context": "http://schema.org",
+          "@type": "Person",
+          "email": "mailto:karenohanyan@yahoo.com",
+          "homeLocation": "#{i18n.__('Yerevan')}",
+          "image": "https://karenohanyan.com/en/images/Karen-Ohanyan.jpg",
+          "jobTitle": "#{i18n.__('Painter')}",
+          "name": "#{i18n.__('Karen Ohanyan')}",
+          "url": "http://www.karenohanyan.com" }]
     script(src="https://cdn.jsdelivr.net/ga-lite/latest/ga-lite.min.js" async)
     script.
       var galite = galite || {}
