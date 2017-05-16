@@ -6,7 +6,7 @@ const fs = require('fs')
 const path = require('path')
 
 const css = fs.readFileSync(path.join(__dirname, '../public/stylesheets/styles.css'), 'utf8').replace(/\s+/g, ' ')
-const js = fs.readFileSync(path.join(__dirname, '../public/javascripts/main.js'), 'utf8')
+const js = fs.readFileSync(path.join(__dirname, '../public/javascripts/main-min.js'), 'utf8')
 const bootstrap = fs.readFileSync(path.join(__dirname, '../public/stylesheets/bootstrap.min.css'), 'utf8').replace(/\s+/g, ' ')
 
 router.get('/:albumName/:imageName?', (req, res, next) => {
@@ -46,6 +46,38 @@ router.get('/contacts', (req, res, next) => {
 
 router.get('/', (req, res, next) => {
   res.render('index', { albums, i18n: res, url: req.url, css, js, bootstrap })
+})
+
+const articles = {
+  'vardan-jaloyan-body-investment': 'vjbi',
+  'from-avant-garde-to-avant-garde-elena-aydinyan': 'fata',
+  'real-utopias-gohar-vardanyan': 'rugv',
+  'real-utopias-vardan-azatyan': 'ruva',
+  'walls-eva-khachatryan': 'wek'
+}
+
+router.get('/articles/:articleName', function (req, res, next) {
+  const articleName = req.params.articleName
+  if (!articleName) return next()
+  res.render('articles/' + articles[articleName] + '-' + req.getLocale(), {
+    url: `/articles/${articleName}`,
+    bootstrap,
+    i18n: res,
+    albums,
+    css,
+    js
+  })
+})
+
+router.get('/articles/', function (req, res, next) {
+  res.render('articles/articles-' + req.getLocale(), {
+    url: '/articles',
+    bootstrap,
+    i18n: res,
+    albums,
+    css,
+    js
+  })
 })
 
 module.exports = router

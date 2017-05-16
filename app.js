@@ -8,7 +8,6 @@ const i18n = require('i18n')
 const compression = require('compression')
 
 const index = require('./routes/index')
-const articles = require('./routes/articles')
 
 const app = express()
 
@@ -43,7 +42,6 @@ app.use(express.static(path.join(__dirname, 'public'), { maxage: '100d' }))
 app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
 
 app.use('/', index)
-app.use('/articles', articles)
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
