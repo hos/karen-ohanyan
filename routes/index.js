@@ -8,7 +8,6 @@ const uglify = require('uglify-es')
 
 const css = fs.readFileSync(path.join(__dirname, '../public/stylesheets/styles.css'), 'utf8').replace(/\s+/g, ' ')
 const js = uglify.minify(fs.readFileSync(path.join(__dirname, '../public/javascripts/main.js'), 'utf8')).code
-const bootstrap = ''//fs.readFileSync(path.join(__dirname, '../public/stylesheets/bootstrap.min.css'), 'utf8').replace(/\s+/g, ' ')
 
 router.get('/:albumName/:imageName?', (req, res, next) => {
   const albumName = req.params.albumName
@@ -25,7 +24,6 @@ router.get('/:albumName/:imageName?', (req, res, next) => {
     url: req.url,
     albumImages,
     i18n: res,
-    bootstrap,
     albums,
     album,
     css,
@@ -34,19 +32,19 @@ router.get('/:albumName/:imageName?', (req, res, next) => {
 })
 
 router.get('/biography', (req, res, next) => {
-  res.render('biography-' + req.getLocale(), { albums, i18n: res, url: req.url, css, js, bootstrap })
+  res.render('biography-' + req.getLocale(), { albums, i18n: res, url: req.url, css, js })
 })
 
 router.get('/exhibitions', (req, res, next) => {
-  res.render('exhibitions', { albums, i18n: res, url: req.url, css, js, bootstrap })
+  res.render('exhibitions', { albums, i18n: res, url: req.url, css, js })
 })
 
 router.get('/contacts', (req, res, next) => {
-  res.render('contacts', { albums, i18n: res, url: req.url, css, js, bootstrap })
+  res.render('contacts', { albums, i18n: res, url: req.url, css, js })
 })
 
 router.get('/', (req, res, next) => {
-  res.render('index', { albums, i18n: res, url: req.url, css, js, bootstrap })
+  res.render('index', { albums, i18n: res, url: req.url, css, js })
 })
 
 const articles = {
@@ -62,7 +60,6 @@ router.get('/articles/:articleName', function (req, res, next) {
   if (!articleName) return next()
   res.render('articles/' + articles[articleName] + '-' + req.getLocale(), {
     url: `/articles/${articleName}`,
-    bootstrap,
     i18n: res,
     albums,
     css,
@@ -73,7 +70,6 @@ router.get('/articles/:articleName', function (req, res, next) {
 router.get('/articles/', function (req, res, next) {
   res.render('articles/articles-' + req.getLocale(), {
     url: '/articles',
-    bootstrap,
     i18n: res,
     albums,
     css,
