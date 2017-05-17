@@ -35,6 +35,12 @@ nav ul {
     font-size: 20px;
 }
 
+.header h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 100;
+}
+
 .articles {
     max-width: 600px;
     margin: 0 auto;
@@ -151,7 +157,7 @@ nav ul {
     cursor: pointer;
 }
 
-.cursor-pointer {
+.img-change {
     display: none;
 }
 

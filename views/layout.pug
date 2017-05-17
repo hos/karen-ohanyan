@@ -1,7 +1,7 @@
 doctype html
-html
+html(lang=i18n.getLocale())
   head
-    title= i18n.__('Karen Ohanyan')
+    title=i18n.__('Karen Ohanyan')
 
     meta(name='google-site-verification', content='N2Noa0lA-SgD9RJVD_9LC_8KaAYKus2xrUumu2yTQpI')
     meta(name="msvalidate.01" content="3D1163D51A19A22585EB995BD429F589")
@@ -46,7 +46,9 @@ html
           a.no-underline.red(href='/hy' + url, hreflang='hy') հայ
           a.no-underline.red(href='/en' + url, hreflang='en') eng
           a.no-underline.red(href='/ru' + url, hreflang='ru') рус
-        header.header #{i18n.__('Karen Ohanyan')}
+        header.header
+          a(href='/' + i18n.getLocale())
+            h1.cursor-pointer #{i18n.__('Karen Ohanyan')}
         br
         ul.parent-menu
           li

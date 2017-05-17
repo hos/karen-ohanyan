@@ -5,10 +5,10 @@ block content
     window.albumImages = !{JSON.stringify(albumImages)}
   .center-view
     .image-container(itemscope itemtype="http://schema.org/VisualArtwork")
-      span.cursor-pointer(onclick='previousImage()') &#9665
+      span.cursor-pointer.img-change(onclick='previousImage()') &#9665
       a(href='/images/large/' + selectedImage.fileName, target="top")
         img(src='/images/large/' + selectedImage.fileName, alt=selectedImage['name_' + i18n.getLocale()], itemprop="image")
-      span.cursor-pointer(onclick='nextImage()') &#9655
+      span.cursor-pointer.img-change(onclick='nextImage()') &#9655
       br
       span.title(itemprop="name") #{selectedImage['name_' + i18n.getLocale()]}
       span  - 
