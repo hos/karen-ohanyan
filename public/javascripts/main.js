@@ -7,7 +7,6 @@
      $('nav').toggleClass('show-menu')
    })
    $('#works-submenu a').click(function (event) {
-     if (event.target === event.currentTarget) return
      $('#works-submenu').toggleClass('hidden')
    })
    document.getElementsByTagName('body')[0].addEventListener('keydown', function (event) {
