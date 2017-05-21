@@ -172,6 +172,7 @@ nav ul {
 
 .img-change.next {
     right: 0;
+    transform: rotateY(180deg)
 }
 
 .hide-part {
@@ -274,6 +275,7 @@ nav ul {
 .image-container {
     position: relative;
     width: 85%;
+    height: auto;
     margin: 0 auto;
 }
 
