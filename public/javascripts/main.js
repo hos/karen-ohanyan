@@ -15,9 +15,6 @@
    })
  })
 
- window.nextImage = nextImage
- window.previousImage = previousImage
-
  function nextImage () {
    var currentImage = getCurrentImage()
    var indexOfNext = window.albumImages.indexOf(currentImage) + 1
