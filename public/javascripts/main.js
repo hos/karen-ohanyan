@@ -6,6 +6,13 @@
    $('.hamburger').click(function () {
      $('nav').toggleClass('show-menu')
    })
+   $('#works-submenu').click(function () {
+     $('#works-submenu').toggleClass('hidden')
+   })
+   document.getElementsByTagName('body')[0].addEventListener('keydown', function (event) {
+     if (event.keyCode === 37) return previousImage()
+     if (event.keyCode === 39) return nextImage()
+   })
  })
 
  window.nextImage = nextImage
@@ -36,6 +43,7 @@
      href = href.match(/20\d{2}/) || href
      return window.location.href.indexOf(href) !== -1
    })
+   if (!$(currentItem).hasClass('work')) $('#works-submenu').toggleClass('hidden')
    return $(currentItem || links.reverse().shift()).addClass('selected')
  }
 

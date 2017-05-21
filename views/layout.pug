@@ -20,7 +20,6 @@ html(lang=i18n.getLocale())
     meta(property='og:image', content='https://karenohanyan.com/images/The-Origin-of-the-World.jpg')
     meta(property='og:description', content=i18n.__("Karen Ohanyan's biography, selected works, exhibitions and some articles."))
     style !{css}
-    style !{bootstrap}
     script(type="application/ld+json").
        [{ "@context": "http://schema.org",
           "@type": "Person",
@@ -54,12 +53,12 @@ html(lang=i18n.getLocale())
         ul.parent-menu
           li
             a(href='/' + i18n.getLocale()) #{i18n.__('Home')}
-          li
+          li#works-submenu
             a.cursor-pointer #{i18n.__('Works')}
             ul.submenu
               each album in albums
                 li()
-                  a(href='/' + i18n.getLocale() + '/' + album.href + '/' + album.defaultImage) #{album['name_' + i18n.getLocale()]}
+                  a.work(href='/' + i18n.getLocale() + '/' + album.href + '/' + album.defaultImage) #{album['name_' + i18n.getLocale()]}
           li
             a(href='/' + i18n.getLocale() + '/articles') #{i18n.__('Articles')}
           li

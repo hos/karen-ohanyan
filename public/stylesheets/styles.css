@@ -27,6 +27,10 @@ nav ul {
     user-select: none;
 }
 
+.home-img {
+    width: 100%;
+}
+
 .header {
     white-space: nowrap;
     margin-top: 14px;
@@ -158,7 +162,16 @@ nav ul {
 }
 
 .img-change {
-    display: none;
+    position: absolute;
+    top: 50%;
+}
+
+.img-change.previous {
+    left: 0;
+}
+
+.img-change.next {
+    right: 0;
 }
 
 .hide-part {
@@ -259,6 +272,7 @@ nav ul {
 }
 
 .image-container {
+    position: relative;
     width: 85%;
     margin: 0 auto;
 }
@@ -298,6 +312,10 @@ nav ul {
 .parent-menu {
     min-width: 200px;
     float: left;
+}
+
+.hidden li {
+    display: none;
 }
 
 .submenu li {
