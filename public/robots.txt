@@ -3,3 +3,12 @@ Allow: /
 
 User-agent: *
 Disallow: /images/thumb/
+
+User-agent: *
+Disallow: /hy/images/thumb/
+
+User-agent: *
+Disallow: /ru/images/thumb/
+
+User-agent: *
+Disallow: /en/images/thumb/
