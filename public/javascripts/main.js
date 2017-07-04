@@ -19,7 +19,9 @@
  function nextImage () {
    var currentImage = getCurrentImage()
    var indexOfNext = window.albumImages.indexOf(currentImage) + 1
-   if (!window.albumImages[indexOfNext]) indexOfNext = 0
+   if (!window.albumImages[indexOfNext]) {
+     indexOfNext = 0
+   }
    var nextImage = window.albumImages[indexOfNext]
    var newLink = window.location.href.replace(currentImage.fileName.replace('.jpg', ''), nextImage.fileName.replace('.jpg', ''))
    window.location.replace(newLink)
@@ -28,7 +30,9 @@
  function previousImage () {
    var currentImage = getCurrentImage()
    var indexOfPrevious = window.albumImages.indexOf(currentImage) - 1
-   if (!window.albumImages[indexOfPrevious]) indexOfPrevious = (window.albumImages.length - 1)
+   if (!window.albumImages[indexOfPrevious]) {
+     indexOfPrevious = (window.albumImages.length - 1)
+   }
    var prevImage = window.albumImages[indexOfPrevious]
    var newLink = window.location.href.replace(currentImage.fileName.replace('.jpg', ''), prevImage.fileName.replace('.jpg', ''))
    window.location.replace(newLink)
@@ -41,7 +45,9 @@
      href = href.match(/20\d{2}/) || href
      return window.location.href.indexOf(href) !== -1
    })
-   if (!$(currentItem).hasClass('work')) $('#works-submenu').toggleClass('hidden')
+   if (!$(currentItem).hasClass('work')) {
+     $('#works-submenu').toggleClass('hidden')
+   }
    return $(currentItem || links.reverse().shift()).addClass('selected')
  }
 
