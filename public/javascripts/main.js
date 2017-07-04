@@ -1,4 +1,4 @@
-/* global $,  */
+/* global $ */
 
  $(function () {
    $('.menu').css('visibility', 'visible')
