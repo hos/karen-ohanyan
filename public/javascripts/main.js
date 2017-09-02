@@ -48,7 +48,8 @@
      currentHref = currentHref.match(/20\d{2}/) || currentHref
      return window.location.href.indexOf(currentHref) !== -1
    })
-   if (!currentItem.classList.contains('work')) {
+
+   if (!currentItem || !currentItem.classList.contains('work')) {
      var menu = document.getElementById('works-submenu')
      menu.classList.toggle('hidden')
    }
