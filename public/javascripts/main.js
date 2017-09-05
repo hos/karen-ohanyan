@@ -1,7 +1,7 @@
  window.onload = function () {
    document.querySelector('.menu').style.visibility = 'visible'
    matchAndMarkSelectedPage()
-   document.querySelector('.hamburger').click(function () {
+   document.querySelector('.hamburger').addEventListener('click', function () {
      document.querySelector('nav').classList.toggle('show-menu')
    })
    var menuItems = [].slice.call(document.querySelectorAll('#works-submenu a'))
