@@ -1,4 +1,17 @@
+ function onKeyUp (e) {
+   window.pressed = window.pressed || []
+   window.pressed.push(e.key)
+   if (window.pressed.join('') === 'letmesee') {
+     var homepic = document.getElementsByClassName('home-img')
+     if (homepic && homepic.length) {
+       homepic[0].style.transition = '2s'
+       homepic[0].style.filter = 'invert()'
+     }
+   }
+ }
+
  window.onload = function () {
+   document.addEventListener('keyup', onKeyUp)
    document.querySelector('.menu').style.visibility = 'visible'
    matchAndMarkSelectedPage()
    document.querySelector('.hamburger').addEventListener('click', function () {
