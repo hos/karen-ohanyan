@@ -2,7 +2,8 @@ function onKeyDown (e) {
   if (e.key === 'o') {
     var img = document.querySelector('.home-img')
     img.style.transition = '2s'
-    img.style.filter = 'invert()'
+    img.style.filter = 'invert(100%)'
+    img.style['-webkit-filter'] = 'invert(100%)'
   }
 }
 
