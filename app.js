@@ -1,11 +1,12 @@
-const express = require('express')
-const path = require('path')
-const favicon = require('serve-favicon')
-const logger = require('morgan')
-const cookieParser = require('cookie-parser')
 const bodyParser = require('body-parser')
-const i18n = require('i18n')
 const compression = require('compression')
+const cookieParser = require('cookie-parser')
+const enforce = require('express-sslify')
+const express = require('express')
+const favicon = require('serve-favicon')
+const i18n = require('i18n')
+const logger = require('morgan')
+const path = require('path')
 
 const index = require('./routes/index')
 
