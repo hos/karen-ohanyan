@@ -17,11 +17,11 @@
     "express-sslify": "^1.2.0",
     "i18n": "^0.8.3",
     "morgan": "^1.9.0",
-    "pug": "^2.0.0-rc.1",
+    "pug": "^2.0.4",
     "serve-favicon": "^2.5.0",
     "uglify-es": "^3.0.7"
   },
   "devDependencies": {
-    "@types/jquery": "^2.0.43"
+    "@types/jquery": "^2.0.53"
   }
 }
