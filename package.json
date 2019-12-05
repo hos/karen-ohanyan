@@ -1,13 +1,6 @@
 {
   "name": "karenohanyan",
   "version": "0.0.0",
-  "private": true,
-  "engines": {
-    "node": "8.1.4"
-  },
-  "scripts": {
-    "start": "node ./bin/www"
-  },
   "dependencies": {
     "body-parser": "^1.18.3",
     "compression": "^1.6.2",
@@ -23,5 +16,12 @@
   },
   "devDependencies": {
     "@types/jquery": "^2.0.53"
+  },
+  "engines": {
+    "node": "12.13.1"
+  },
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
   }
 }
