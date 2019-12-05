@@ -19,7 +19,8 @@ html(lang=i18n.getLocale())
     meta(property='og:url', content='https://karenohanyan.com/')
     meta(property='og:image', content='https://karenohanyan.com/images/The-Origin-of-the-World.jpg')
     meta(property='og:description', content=i18n.__("Karen Ohanyan's biography, selected works, exhibitions and some articles."))
-    style !{css}
+    link(rel="stylesheet", href="/styles.css")
+    script(src="/app.js")
     script(type="application/ld+json").
        [{ "@context": "http://schema.org",
           "@type": "Person",
@@ -69,5 +70,5 @@ html(lang=i18n.getLocale())
       block content
 
 if i18n.getLocale() == 'hy'
-  link(rel='stylesheet', type='text/css', href='/stylesheets/font-' + i18n.getLocale() + '.css')
+  link(rel='stylesheet', type='text/css', href='/font-hy.css')
 script !{js}

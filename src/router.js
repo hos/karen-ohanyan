@@ -1,26 +1,11 @@
 import express from 'express'
-import fs from 'fs'
-import path from 'path'
-import uglify from 'uglify-es'
 
 import data, { albums, articles } from './data'
-
-import { srcDir } from './config'
-
-const css = fs
-  .readFileSync(path.join(srcDir, './public/stylesheets/styles.css'), 'utf8')
-  .replace(/\s+/g, ' ')
-
-const js = uglify.minify(
-  fs.readFileSync(path.join(srcDir, './public/javascripts/main.js'), 'utf8')
-).code
 
 export default express
   .Router()
   .use((req, res, next) => {
     res.locals.i18n = req
-    res.locals.js = js
-    res.locals.css = css
     res.locals.albums = albums
     next()
   })
