@@ -15,4 +15,4 @@ COPY src src
 
 RUN yarn install
 
-CMD ["yarn", "start"]
+CMD bash /app/.profile.d/heroku-exec.sh && yarn start
