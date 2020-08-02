@@ -1,8 +1,9 @@
 FROM node:14-alpine3.12
 
+RUN apk add --no-cache make gcc g++ python3 curl openssh bash
+
 WORKDIR /app
 
-RUN apk add --no-cache bash
 ADD ./scripts/heroku-exec.sh /app/.profile.d/
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 
