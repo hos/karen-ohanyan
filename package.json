@@ -22,7 +22,7 @@
   },
   "private": true,
   "scripts": {
-    "start": "yarn node --experimental-modules --es-module-specifier-resolution=node ./src/server.js"
+    "start": "yarn node --es-module-specifier-resolution=node ./src/server.js"
   },
   "type": "module"
 }
