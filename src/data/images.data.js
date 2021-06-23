@@ -454,5 +454,29 @@ export default [
     name_ru: 'Происхождение Мира',
     name_hy: 'Աշխարհի Ծագումը',
     year: 2014
+  },
+  {
+    fileName: 'Sevan-1.jpg',
+    size: '',
+    name_en: 'Sevan 1',
+    name_ru: 'Севан 1',
+    name_hy: 'Սևան 1',
+    year: 2018
+  },
+  {
+    fileName: 'Sevan-2.jpg',
+    size: '',
+    name_en: 'Sevan 2',
+    name_ru: 'Севан 2',
+    name_hy: 'Սևան 2',
+    year: 2018
+  },
+  {
+    fileName: 'Sevan-3.jpg',
+    size: '',
+    name_en: 'Sevan 3',
+    name_ru: 'Севан 3',
+    name_hy: 'Սևան 3',
+    year: 2019
   }
 ]

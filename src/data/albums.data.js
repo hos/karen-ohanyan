@@ -58,5 +58,15 @@ export default [
     artform: 'collage',
     images: [],
     years: [2016]
+  },
+  {
+    defaultImage: 'Sevan-1',
+    name_en: '2016-2019 (Sevan)',
+    name_ru: '2016-2019 (Севан)',
+    name_hy: '2016-2019 (Սևան)',
+    href: '2018-2019',
+    artform: 'painting',
+    images: [],
+    years: [2018, 2019]
   }
 ]
