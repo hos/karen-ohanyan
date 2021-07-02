@@ -457,7 +457,7 @@ export default [
   },
   {
     fileName: 'Sevan-1.jpg',
-    size: '',
+    size: 'oil on canvas, 140x190,5cm',
     name_en: 'Sevan 1',
     name_ru: 'Севан 1',
     name_hy: 'Սևան 1',
@@ -465,7 +465,7 @@ export default [
   },
   {
     fileName: 'Sevan-2.jpg',
-    size: '',
+    size: 'oil on canvas, 142x174cm',
     name_en: 'Sevan 2',
     name_ru: 'Севан 2',
     name_hy: 'Սևան 2',
@@ -473,7 +473,7 @@ export default [
   },
   {
     fileName: 'Sevan-3.jpg',
-    size: '',
+    size: 'oil on canvas, 146x202cm',
     name_en: 'Sevan 3',
     name_ru: 'Севан 3',
     name_hy: 'Սևան 3',
