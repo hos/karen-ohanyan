@@ -61,12 +61,12 @@ export default [
   },
   {
     defaultImage: 'Sevan-1',
-    name_en: '2016-2019 (Sevan)',
-    name_ru: '2016-2019 (Севан)',
-    name_hy: '2016-2019 (Սևան)',
-    href: '2018-2019',
+    name_en: '2017-2019 (Sevan)',
+    name_ru: '2017-2019 (Севан)',
+    name_hy: '2017-2019 (Սևան)',
+    href: '2017-2019',
     artform: 'painting',
     images: [],
-    years: [2018, 2019]
+    years: [2017, 2019]
   }
 ]

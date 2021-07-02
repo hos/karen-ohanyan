@@ -457,11 +457,11 @@ export default [
   },
   {
     fileName: 'Sevan-1.jpg',
-    size: 'oil on canvas, 140x190,5cm',
+    size: 'oil on canvas, 140x190.5cm',
     name_en: 'Sevan 1',
     name_ru: 'Севан 1',
     name_hy: 'Սևան 1',
-    year: 2018
+    year: 2017
   },
   {
     fileName: 'Sevan-2.jpg',
