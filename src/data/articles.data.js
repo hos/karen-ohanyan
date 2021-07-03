@@ -3,5 +3,6 @@ export default {
   'from-avant-garde-to-avant-garde-elena-aydinyan': 'fata',
   'real-utopias-gohar-vardanyan': 'rugv',
   'real-utopias-vardan-azatyan': 'ruva',
-  'walls-eva-khachatryan': 'wek'
+  'walls-eva-khachatryan': 'wek',
+  'armen-yesayants-sevan': 'ays',
 }
