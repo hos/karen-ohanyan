@@ -5,4 +5,5 @@ export default {
   'real-utopias-vardan-azatyan': 'ruva',
   'walls-eva-khachatryan': 'wek',
   'armen-yesayants-sevan': 'ays',
+  'ashot-pashinyan-sevan': 'aps',
 }
